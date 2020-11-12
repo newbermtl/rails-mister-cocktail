@@ -5,15 +5,25 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require "open-uri"
+require 'open-uri'
 
+puts 'clearing database ....'
 
-url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
+Ingredient.destroy_all
+
+puts 'Rebuilding database ... '
+
+url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 
 serialized = open(url).read
 
 ingredients = JSON.parse(serialized)
 
-ingredients["drinks"].each do |ingredient|
+ingredients['drinks'].each do |ingredient|
   Ingredient.create!({ name: ingredient['strIngredient1'] })
+  puts "Added #{ingredient['strIngredient1']}"
 end
+
+Cocktail.create!({ name: 'Old-Fashioned' })
+
+puts 'Done!'
