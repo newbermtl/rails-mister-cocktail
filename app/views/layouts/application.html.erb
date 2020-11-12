@@ -12,6 +12,43 @@
   </head>
 
   <body>
+
+      <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+        <%= link_to root_path, class: "navbar-brand" do %>
+          <%= image_tag "https://www.wheatbellyblog.com/wp-content/uploads/2017/07/Pina-Colada_canstockphoto21145297-copy.jpeg" %>
+        <% end %>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <%= link_to "Home", "#", class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Messages", "#", class: "nav-link" %>
+            </li>
+            <li class="nav-item dropdown">
+              <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <%= link_to "Action", "#", class: "dropdown-item" %>
+                <%= link_to "Another action", "#", class: "dropdown-item" %>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://d36tnp772eyphs.cloudfront.net/blogs/1/2018/11/Bartender-dealing-with-a-drunk-man-during-the-Christmas-holidays-at-a-bar-1200x854.jpg);">
+
+      <div class="container">
+        <h1>🍹 Mr.Cocktail 🍹 brings <strong>horrible hangovers</strong> to <strong>thirsty people</strong>!</h1>
+        <p>YourLiver.Destroy</p>
+      </div>
+    </div>
+
     <%= yield %>
   </body>
 </html>
