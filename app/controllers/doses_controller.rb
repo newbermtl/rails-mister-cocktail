@@ -12,7 +12,6 @@ class DosesController < ApplicationController
     @dose.save!
 
     redirect_to cocktail_path(@cocktail)
-
   end
 
   def destroy
