@@ -1,9 +1,13 @@
-<%= link_to 'Add a cocktail', new_cocktail_path  %>
-
-<ul>
-<% @cocktails.each do |cocktail| %>
-  <li>
-    <%= link_to cocktail.name, cocktail_path(cocktail)  %>
-  </li>
-<% end %>
-</ul>
+<div class="container">
+  <ul>
+    <div class="cards mt-4">
+      <% @cocktails.each do |cocktail| %>
+      <li>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://www.posterhub.com.sg/images/detailed/1/APAD009.jpg)">
+          <%= link_to cocktail.name, cocktail_path(cocktail) %>
+        </div>
+      </li>
+      <% end %>
+    </div>
+  </ul>
+</div>
