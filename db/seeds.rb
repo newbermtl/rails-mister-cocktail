@@ -8,7 +8,7 @@
 require 'open-uri'
 
 puts 'clearing database ....'
-
+Cocktail.destroy_all
 Ingredient.destroy_all
 
 puts 'Rebuilding database ... '
