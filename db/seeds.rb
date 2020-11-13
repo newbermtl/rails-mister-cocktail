@@ -24,6 +24,5 @@ ingredients['drinks'].each do |ingredient|
   puts "Added #{ingredient['strIngredient1']}"
 end
 
-Cocktail.create!({ name: 'Old-Fashioned' })
 
 puts 'Done!'
