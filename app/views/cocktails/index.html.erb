@@ -1,9 +1,9 @@
 
 <div class="container">
   <ul>
-    <div class="cards mt-4">
+    <div class="cards">
       <% @cocktails.each do |cocktail|  %>
-        <% cocktail.photo.attached? ? card_style = "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('#{cl_image_path cocktail.photo.key, height: 300, width: 400, crop: :fill}')" : card_style = "background-color: #401618" %>
+        <% cocktail.photo.attached? ? card_style = "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('#{cl_image_path cocktail.photo.key, :width=>400, :effect=>"sepia:80"}')" : card_style = "background-color: #401618" %>
 
       <li>
         <div class="card-category" style=" <%= card_style %> ">

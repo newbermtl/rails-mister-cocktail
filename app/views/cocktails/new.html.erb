@@ -1,7 +1,8 @@
-<h2> Add a New Cocktail </h2>
+<div class="container-form">
 
 <%= simple_form_for(@cocktail) do |f| %>
   <%= f.input :name %>
   <%= f.input :photo, as: :file %>
   <%= f.submit "Add Cocktail", class: 'btn-flat' %>
 <% end %>
+</div>
